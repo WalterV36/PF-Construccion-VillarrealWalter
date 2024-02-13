@@ -1,0 +1,457 @@
+/*reset*/
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+
+ } 
+
+ .grid-container {
+    display: grid;
+    border: 3px solid black;
+    grid-template-rows: 89px 60px 200px 60px 3fr 0.2fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    'nav-pin nav-prin nav-prin nav-prin'
+    'nav-sec nav-sec nav-sec nav-sec'
+    'main main main main'
+    'promo promo promo promo'
+    'box-venta box-venta box-venta box-venta'
+    'pie pie pie pie'
+    ;
+
+
+}
+.grid-container-electro {
+    display: grid;
+    grid-template-rows: 89px 200px 3fr 0.2fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+    'nav-pin nav-prin nav-prin nav-prin nav-prin'
+    'main main main main main'
+    'nav-hor box-venta box-venta box-venta box-venta'
+    'pie pie pie pie pie'
+    ;
+}
+ 
+ .grid-item{
+   
+}
+
+.nav-prin{
+    grid-area: nav-prin;
+}
+.nav-sec{
+    grid-area: nav-sec;
+
+}
+.g-main{
+    grid-area: main;
+}
+.nav-hor{
+    grid-area: nav-hor;
+}
+.promo{
+    grid-area: promo;
+}
+.g-box-venta{
+    grid-area: box-venta;
+}
+.pie{
+    grid-area: pie;
+}
+/*header*/
+.position-fixed{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0px;
+    display: flex;
+}
+
+.icono {
+    width: 80px;
+    height: 60px;
+    margin: 15px;
+}
+
+.menu-nav-principal {
+    background-color: #5A145A;
+    display: flex;
+    width: 100%;
+    
+    
+
+}
+.menu-nav-principal nav{
+    display: flex;
+ 
+}
+
+
+.listas {
+    display: flex;
+    padding-left: 25px;
+    padding-top: 35px;
+}
+
+.listas li{
+    list-style: none;
+    color: #ffffff;
+    display:flex;
+    margin: 0px 15px 15px 15px ;
+    
+
+}
+.listas li a{
+    color: #ffffff;
+    text-decoration: none;
+    
+
+}
+
+.menu-secundario-flex {
+    display: flex;
+}
+
+.menu-secundario {
+    background-color: #ffffff;
+    display: flex;
+    width: 100%;
+}
+
+.menu-secundario nav{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    
+}
+.barra {
+    width: 35px;
+    height: 35px;
+    margin: 10px 15px;
+}
+
+.listas-secundaria{
+    display: flex;
+    padding-left: 35px;
+    margin-top: 15px;   
+}
+
+.listas-secundaria li{
+    list-style: none;
+}
+.listas-secundaria li a {
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+    list-style: none;
+    font-size: 18px;
+    margin-right: 44px;
+
+}
+
+/*main*/
+
+.fondo-construccion{
+    background-image:url('../assets/construccion.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content:center;
+    flex-flow: column;
+    display: flex;
+    height: 200px;
+}
+.fondo-construccion-electro{
+    background-image:url('../assets/electricidad.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content:center;
+    flex-flow: column;
+    display: flex;
+    height: 200px;
+    
+}
+
+.fondo-construccion-plomeria{
+    background-image:url('../assets/Plomeria.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content:center;
+    flex-flow: column;
+    display: flex;
+    height: 200px;
+    
+}
+.fondo-construccion div{
+    display: flex;
+}
+
+
+.boton-comenzar{
+    color: #ffffff;
+    background-color: #5A145A;
+    padding: 10px 15px;
+    margin: 30px 10px;
+    border-radius: 10px;
+    ;
+}
+
+.promociones {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+
+}
+
+.promociones h3{
+    font-size: 30px;
+}
+
+.nav-horizontal {
+    display: flex;
+    border-right: 1px solid #0000007c;
+    border-top:1px solid #0000007c;
+    border-radius: 5px;
+    height: 100%;
+    margin-top: 10px;
+}
+.nav-horizontal-listas{
+    display: flex;
+    color: #000000;
+    font-weight: 500;
+    flex-flow: column;
+    padding: 20px;
+}
+.nav-horizontal-listas li{
+    list-style: none;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.flex-box-venta{
+    display: flex;
+    flex-flow: wrap;
+    margin: 20px;
+    justify-content: center;
+    
+}
+
+.box-venta {
+    margin-right: 25px;   
+    border: #000000 1px solid;
+    width: 250px;
+    height: 470px;
+    margin-left: 15px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 3px #0000003f ;
+}
+.box-venta h3{
+    padding: 15px;
+    margin-bottom: 12px;
+    text-align: center;
+    background-color: #a3a1a1;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.box-venta img {
+    width: 200px;
+    height: 210px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin: 10px 10px 10px 22px;
+
+    
+
+}
+
+.box-venta p {
+    padding: 5px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.flex-box-venta {
+    display: flex;
+}
+
+.box-venta span{
+    font-weight: 700;
+    font-size: 22px;
+    position: relative;
+    top: 25px;
+    left: 30px;
+    
+}
+.boton-comprar{
+    background-color: #5A145A;
+    color: #ffffff;
+    padding: 15px  20px;
+    border-radius: 5px;
+    position: relative;
+    top: 25px;
+    left: 65px;    
+}
+
+.foot-flex{
+    display: flex;
+    background-color: #5A145A;
+    justify-content: center;
+    
+    
+}
+.foot{
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+.foot-lista{
+    display: flex;
+    flex-flow: column;
+    margin-right: 15px;
+    
+}
+.foot ul li{
+    padding: 10px;
+    color: #ffffff;
+    list-style: none;
+    font-size: 12px;
+    
+}
+
+/*media query*/
+
+@media (max-width: 720px){
+    .barra{
+        display: none;
+     }
+     .flex-menu-secundario{
+        align-items: center;
+     }
+     .listas-secundaria{
+        margin-left: 60px;
+    }
+    .listas-secundaria li{
+        padding-left: 30px;
+        justify-content: center;
+        
+    }
+
+    .listas-secundaria li a {
+        font-size: 16px;
+  
+    
+    }
+}
+
+@media (max-width: 480px){
+ .grid-container{
+    border: 3px solid black;
+    grid-template-rows: 52px 191px 200px 44px 3.2fr 58px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'nav-prin nav-prin'
+    'nav-sec nav-sec'
+    'main main'
+    'promo promo'
+    'box-venta box-venta'
+    'pie pie'
+    ;
+    }
+
+    .grid-container-electro{
+        grid-template-rows: 89px 200px 3.2fr 58px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        'nav-pin nav-prin '
+        'main main'
+        'box-venta box-venta'
+        'pie pie';
+    }
+    .listas {
+        display: flex;
+        padding-left: 0px;
+        padding-top: 25px;
+    }
+    .icono{
+        width: 45px;
+        height: 35px;
+        margin-left: 15px;
+        margin-right: 5px;
+        
+    }
+
+    .barra{
+        display: none;
+    }
+    .listas li{
+        display: flex;
+        padding: 0px;
+    }
+
+    .listas-secundaria{
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    margin-left: 0px;
+    
+    }
+    .listas-secundaria li{
+    font-size: 5px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 1px 1px #000000;
+    padding: 10px;
+    
+
+    }
+    .listas-secundaria li a {
+        display: flex;
+        justify-content: center;
+        padding-left: 40px;
+
+    }
+    .titulo-presupuesto{
+        font-size: 18px;
+    }
+    .promociones h3{
+        font-size: 20px;
+    }
+
+    
+    .nav-horizontal{
+        display: none;
+    }
+
+    .box-venta{
+
+    }
+
+
+    .foot-lista{
+        flex-flow: row;
+    }
+
+    .foot-2{
+        display: none;
+    }
+    .foot-3{
+        display: none;
+    }
+    .foot-4{
+        display: none;
+    }
+
+
+
+
+}
