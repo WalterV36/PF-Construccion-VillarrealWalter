@@ -9,7 +9,7 @@
  .grid-container {
     display: grid;
     border: 3px solid black;
-    grid-template-rows: 89px 60px 200px 60px 3fr 0.2fr;
+    grid-template-rows: 89px 60px 185px 100px 1.5fr 0.2fr 130px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
     'nav-pin nav-prin nav-prin nav-prin'
@@ -17,6 +17,7 @@
     'main main main main'
     'promo promo promo promo'
     'box-venta box-venta box-venta box-venta'
+    'descuentos descuentos descuentos descuentos'
     'pie pie pie pie'
     ;
 
@@ -34,9 +35,6 @@
     ;
 }
  
- .grid-item{
-   
-}
 
 .nav-prin{
     grid-area: nav-prin;
@@ -57,11 +55,14 @@
 .g-box-venta{
     grid-area: box-venta;
 }
+.descuentos{
+    grid-area: descuentos;
+}
 .pie{
     grid-area: pie;
 }
 /*header*/
-.position-fixed{
+.navprincipal{
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -75,27 +76,27 @@
     margin: 15px;
 }
 
-.menu-nav-principal {
-    background-color: #5A145A;
+.navprincipal__navbar {
+    background: linear-gradient( #5A145A, #240824);
     display: flex;
     width: 100%;
     
     
 
 }
-.menu-nav-principal nav{
+.navprincipal__navbar__nav{
     display: flex;
  
 }
 
 
-.listas {
+.navprincipal__navbar__nav__listas {
     display: flex;
     padding-left: 25px;
     padding-top: 35px;
 }
 
-.listas li{
+.navprincipal__navbar__nav__listas li{
     list-style: none;
     color: #ffffff;
     display:flex;
@@ -103,45 +104,56 @@
     
 
 }
-.listas li a{
+.navprincipal__navbar__nav__listas li a{
     color: #ffffff;
     text-decoration: none;
     
 
 }
 
-.menu-secundario-flex {
+.navsecundario {
+    position: fixed;
+    width: 100%;
+    top: 89px;
+    z-index: 2;
     display: flex;
 }
+.navsecundario__listas{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000000;
+    margin: 0px 20px;
+}
 
-.menu-secundario {
+.navsecundario__navbar {
     background-color: #ffffff;
     display: flex;
     width: 100%;
 }
 
-.menu-secundario nav{
+.navsecundario__navbar__nav{
     display: flex;
     justify-content: center;
     width: 90%;
     
 }
-.barra {
+.navsecundario__navbar__nav__listas__barra {
     width: 35px;
     height: 35px;
     margin: 10px 15px;
 }
 
-.listas-secundaria{
+.navsecundario__navbar__nav__listas{
     display: flex;
     padding-left: 35px;
     margin-top: 15px;   
 }
 
-.listas-secundaria li{
+.navsecundario__navbar__nav__listas li{
     list-style: none;
 }
-.listas-secundaria li a {
+.navsecundario__navbar__nav__listas li a {
     font-weight: 500;
     color: #000000;
     text-decoration: none;
@@ -152,6 +164,18 @@
 }
 
 /*main*/
+
+.carrusel {
+    height: 200px ;
+    display: flex;
+
+}
+
+
+.carrusel__deslizamiento{
+    z-index: 0;
+}
+
 
 .fondo-construccion{
     background-image:url('../assets/construccion.png');
@@ -194,18 +218,9 @@
 }
 
 
-.boton-comenzar{
-    color: #ffffff;
-    background-color: #5A145A;
-    padding: 10px 15px;
-    margin: 30px 10px;
-    border-radius: 10px;
-    ;
-}
-
 .promociones {
     display: flex;
-    padding: 10px;
+    padding: 30px;
     justify-content: center;
 
 }
@@ -213,8 +228,13 @@
 .promociones h3{
     font-size: 30px;
 }
+/*body*/
 
-.nav-horizontal {
+body {
+    background-color: #e6e4e4;
+}
+
+.navbarHorizontal {
     display: flex;
     border-right: 1px solid #0000007c;
     border-top:1px solid #0000007c;
@@ -222,104 +242,145 @@
     height: 100%;
     margin-top: 10px;
 }
-.nav-horizontal-listas{
+.navHor__nav__listas{
     display: flex;
     color: #000000;
     font-weight: 500;
     flex-flow: column;
     padding: 20px;
 }
-.nav-horizontal-listas li{
+.navbarHorizontal__nav__listas li{
     list-style: none;
     text-decoration: none;
     padding: 15px;
 }
 
-.flex-box-venta{
+.boxventa{
     display: flex;
     flex-flow: wrap;
-    margin: 20px;
+    margin: px;
     justify-content: center;
     
 }
+.boxventa_flex {
+    display: flex;
+    margin-bottom: 15px;
+}
 
-.box-venta {
+.boxventa__card {
+    background-color: #ffffff;
     margin-right: 25px;   
     border: #000000 1px solid;
-    width: 250px;
-    height: 470px;
+    width: 210px;
+    height: 390px;
     margin-left: 15px;
     border-radius: 10px;
     margin: 10px;
     box-shadow: 0px 3px #0000003f ;
+
 }
-.box-venta h3{
+.boxventa__card h3{
+    
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
     padding: 15px;
     margin-bottom: 12px;
     text-align: center;
     background-color: #a3a1a1;
     border-radius: 10px 10px 0px 0px;
+    justify-content: center;
+
+    position: relative;
+    
 }
 
-.box-venta img {
-    width: 200px;
-    height: 210px;
-    border: 2px solid #000000;
+
+
+.boxventa__card img{
+    width: 170px;
+    height: 170px;
     border-radius: 10px;
-    margin: 10px 10px 10px 22px;
+    margin-left: 18px;
+    margin-top: 10px;
 
     
 
 }
 
-.box-venta p {
-    padding: 5px;
+.boxventa__card p {
+    padding: 5px 15px;
     margin-top: 10px;
     font-weight: 500;
+    font-size: 14px;
 }
 
-.flex-box-venta {
-    display: flex;
-}
+.boxventa__card__iconoOferta{
 
-.box-venta span{
-    font-weight: 700;
-    font-size: 22px;
     position: relative;
-    top: 25px;
+    top: -25px;
+    right: -242px;
+}
+
+.boxventa__card__iconoOferta img{
+    width: 50px;
+    height: 50px;
+}
+
+.boxventa__card__precio{
+    font-weight: 700;
+    font-size: 18px;
+    position: relative;
+    top: -12px;
     left: 30px;
     
 }
-.boton-comprar{
-    background-color: #5A145A;
+.boxventa__card__botoncomprar{
+    background: linear-gradient( #5A145A, #240824);
     color: #ffffff;
-    padding: 15px  20px;
+    padding: 10px  15px;
     border-radius: 5px;
     position: relative;
-    top: 25px;
-    left: 65px;    
+    top: -13px;
+    left: 48px;    
 }
 
-.foot-flex{
+.descuentosExclusivos{
     display: flex;
-    background-color: #5A145A;
+    flex-flow: wrap;
+    justify-content: center;
+}
+.descuentosExclusivos__card {
+    display: flex;
+    margin: 10px;
+    width: 100%;
+    
+}
+.descuentosExclusivos__card__imagen {
+    width: 170px;
+    height: 170px;
+}
+
+.footFlex{
+    display: flex;
+    background: linear-gradient( #5A145A, #240824);
     justify-content: center;
     
     
 }
-.foot{
+.footFlex__foot{
     display: flex;
     padding-left: 50px;
     padding-right: 50px;
 
 }
-.foot-lista{
+.footFlex__foot__lista{
     display: flex;
     flex-flow: column;
     margin-right: 15px;
     
 }
-.foot ul li{
+.footFlex__foot ul li{
     padding: 10px;
     color: #ffffff;
     list-style: none;
@@ -330,22 +391,49 @@
 /*media query*/
 
 @media (max-width: 720px){
+    .grid-container {
+        display: grid;
+        border: 3px solid black;
+        grid-template-rows: 89px 60px 100px 100px 1.5fr 0.2fr 220px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        'nav-pin nav-prin nav-prin nav-prin'
+        'nav-sec nav-sec nav-sec nav-sec'
+        'main main main main'
+        'promo promo promo promo'
+        'box-venta box-venta box-venta box-venta'
+        'descuentos descuentos descuentos descuentos'
+        'pie pie pie pie'
+        ;
+    
+    }
+    .grid-container-electro {
+        display: grid;
+        grid-template-rows: 89px 200px 3.4fr 140px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 
+        'nav-pin nav-prin nav-prin nav-prin nav-prin'
+        'main main main main main'
+        'nav-hor box-venta box-venta box-venta box-venta'
+        'pie pie pie pie pie'
+        ;
+    }
     .barra{
         display: none;
      }
-     .flex-menu-secundario{
+     .navsecundario__navbar{
         align-items: center;
      }
-     .listas-secundaria{
+     .navsecundario__navbar__nav__listas{
         margin-left: 60px;
     }
-    .listas-secundaria li{
+    .navsecundario__navbar__nav__listas li{
         padding-left: 30px;
         justify-content: center;
         
     }
 
-    .listas-secundaria li a {
+    .navsecundario__navbar__nav__listas li a {
         font-size: 16px;
   
     
@@ -355,7 +443,7 @@
 @media (max-width: 480px){
  .grid-container{
     border: 3px solid black;
-    grid-template-rows: 52px 191px 200px 44px 3.2fr 58px;
+    grid-template-rows: 79px 264px 80px 84px 1.8fr  0.2fr 58px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     'nav-prin nav-prin'
@@ -363,12 +451,14 @@
     'main main'
     'promo promo'
     'box-venta box-venta'
+    'descuentos descuentos'
     'pie pie'
     ;
     }
+    
 
     .grid-container-electro{
-        grid-template-rows: 89px 200px 3.2fr 58px;
+        grid-template-rows: 89px 200px 3.2fr 200px 58px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: 
         'nav-pin nav-prin '
@@ -376,7 +466,11 @@
         'box-venta box-venta'
         'pie pie';
     }
-    .listas {
+
+    .navprincipal__navbar{
+        height: 100px;
+    }
+    .navprincipal__navbar__nav__listas {
         display: flex;
         padding-left: 0px;
         padding-top: 25px;
@@ -392,12 +486,12 @@
     .barra{
         display: none;
     }
-    .listas li{
+    .navprincipal__navbar__nav__listas li{
         display: flex;
         padding: 0px;
     }
 
-    .listas-secundaria{
+    .navsecundario__navbar__nav__listas{
     flex-direction: column;
     justify-content: center;
     display: flex;
@@ -405,7 +499,7 @@
     margin-left: 0px;
     
     }
-    .listas-secundaria li{
+    .navsecundario__navbar__nav__listas li{
     font-size: 5px;
     border: 1px solid #000000;
     border-radius: 5px;
@@ -414,7 +508,7 @@
     
 
     }
-    .listas-secundaria li a {
+    .navsecundario__navbar__nav__listas li a {
         display: flex;
         justify-content: center;
         padding-left: 40px;
@@ -428,7 +522,7 @@
     }
 
     
-    .nav-horizontal{
+    .navbarHorizontal{
         display: none;
     }
 
@@ -437,7 +531,8 @@
     }
 
 
-    .foot-lista{
+
+    .footFlex__foot__lista{
         flex-flow: row;
     }
 
